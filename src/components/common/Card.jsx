@@ -25,38 +25,42 @@ const Card = ({
           alt={title}
           className="w-full h-48 object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
         />
-        {/* Example hover image overlay (optional):
-        <div className="hover-image bg-mint/80 flex items-center justify-center">
-          <span className="text-2xl font-handlee text-primary">Preview</span>
-        </div>
-        */}
       </div>
-      <div className="p-5 flex flex-col items-start gap-2">
-        <h3 className="font-handlee text-2xl leading-7 mb-2 text-[#0c0c0c] group-hover:text-[#5ab5e8] transition-colors duration-300 text-reveal">
-          {title.split('\n').map((line, idx) => (
-            <span key={idx} className="block text-reveal">
-              {line}
-            </span>
-          ))}
-        </h3>
-        {description && (
-          <p className="text-base text-secondary mb-2 animate-fade-in text-reveal">{description}</p>
-        )}
-        <div className="flex gap-3 mt-2">
-          {githubLink && (
-            <a href={githubLink} target="_blank" rel="noopener noreferrer">
-              <button className="bg-mint text-black px-4 py-2 rounded-lg font-medium shadow hover:bg-lavender hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-lavender button-animated">
-                GitHub
-              </button>
-            </a>
+      <div className="p-5 flex flex-col items-start gap-2 relative">
+        {/* Overlay for text visibility */}
+        <div
+          className="absolute inset-0 bg-white/70 backdrop-blur-sm rounded-xl -z-1"
+          style={{ pointerEvents: 'none' }}
+        />
+        <div className="relative z-10 w-full">
+          <h3 className="font-handlee text-2xl leading-7 mb-2 text-[#181818] font-bold group-hover:text-[#5ab5e8] transition-colors duration-300">
+            {title.split('\n').map((line, idx) => (
+              <span key={idx} className="block">
+                {line}
+              </span>
+            ))}
+          </h3>
+          {description && (
+            <p className="text-base text-[#333] mb-2 animate-fade-in font-medium drop-shadow-sm">
+              {description}
+            </p>
           )}
-          {liveDemoLink && (
-            <a href={liveDemoLink} target="_blank" rel="noopener noreferrer">
-              <button className="bg-peach text-black px-4 py-2 rounded-lg font-medium shadow hover:bg-mint hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-mint button-animated">
-                Live Demo
-              </button>
-            </a>
-          )}
+          <div className="flex gap-3 mt-2">
+            {githubLink && (
+              <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                <button className="bg-mint text-black px-4 py-2 rounded-lg font-medium shadow hover:bg-lavender hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-lavender button-animated">
+                  GitHub
+                </button>
+              </a>
+            )}
+            {liveDemoLink && (
+              <a href={liveDemoLink} target="_blank" rel="noopener noreferrer">
+                <button className="bg-peach text-black px-4 py-2 rounded-lg font-medium shadow hover:bg-mint hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-mint button-animated">
+                  Live Demo
+                </button>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>

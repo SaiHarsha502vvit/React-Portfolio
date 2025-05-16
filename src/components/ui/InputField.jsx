@@ -29,7 +29,7 @@ const InputField = ({
         onChange={onChange}
         placeholder={placeholder}
         required={required}
-        className={`w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#ffc100] button-animated morph-shape ${inputClassName}`}
+        className={`w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#ffc100] ${inputClassName}`}
         {...props}
       />
     </div>

@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Card from '../../components/common/Card';
 import Tag from '../../components/ui/Tag';
 
 const PortfolioSection = () => {
+  const parallaxRef = useRef(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (parallaxRef.current) {
+        const y = window.scrollY;
+        parallaxRef.current.style.transform = `translateX(${y * 0.08}px)`;
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const portfolioItems = [
     {
       id: 1,
@@ -39,7 +51,7 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-lavender via-mint to-peach animate-fade-in">
+    <section>
       <div className="container mx-auto px-4">
         <div className="mb-12 relative flex items-center">
           <Tag variant="lavender" className="mb-4 animate-fade-in">
