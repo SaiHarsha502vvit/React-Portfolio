@@ -10,9 +10,28 @@ html, body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  cursor: none !important;
 }
 
 /* Add smooth transitions */
 a, button {
   transition: all 0.3s ease;
+}
+
+/* Ripple animation for custom cursor */
+.custom-cursor-ripple {
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.4s, transform 0.4s;
+}
+.custom-cursor-ripple.active {
+  opacity: 0.5;
+  transform: scale(2.5);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+/* Prevent text selection cursor from showing */
+* {
+  cursor: none !important;
 }

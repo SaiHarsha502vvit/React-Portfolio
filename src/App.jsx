@@ -1,8 +1,12 @@
 import Routes from './Routes';
+import CustomCursor from './components/common/CustomCursor';
 
 function App() {
   return (
-        <Routes />
+    <>
+      <CustomCursor />
+      <Routes />
+    </>
   );
 }
 
