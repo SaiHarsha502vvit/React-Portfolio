@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const InputField = ({
+const Textarea = ({
   label,
   value,
   onChange,
   placeholder = '',
-  type = 'text',
   name,
+  rows = 4,
   required = false,
   className = '',
   labelClassName = '',
-  inputClassName = '',
+  textareaClassName = '',
   ...props
 }) => {
   return (
@@ -21,32 +21,32 @@ const InputField = ({
           {label}
         </label>
       )}
-      <input
-        type={type}
+      <textarea
         id={name}
         name={name}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        rows={rows}
         required={required}
-        className={`w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#ffc100] button-animated morph-shape ${inputClassName}`}
+        className={`w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#ffc100] button-animated morph-shape ${textareaClassName}`}
         {...props}
       />
     </div>
   );
 };
 
-InputField.propTypes = {
+Textarea.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
-  type: PropTypes.string,
   name: PropTypes.string.isRequired,
+  rows: PropTypes.number,
   required: PropTypes.bool,
   className: PropTypes.string,
   labelClassName: PropTypes.string,
-  inputClassName: PropTypes.string,
+  textareaClassName: PropTypes.string,
 };
 
-export default InputField;
+export default Textarea;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Header from '../../components/common/Header';
 import Footer from '../../components/common/Footer';
 import HeroSection from '../../components/common/HeroSection';
@@ -10,14 +10,37 @@ import AchievementsSection from './AchievementsSection';
 import PositionsSection from './PositionsSection';
 
 const Home = () => {
+  const sectionRefs = useRef([]);
+
   useEffect(() => {
     // Set background image
     document.body.style.backgroundImage = "url('/images/img_bg_patterns.png')";
     document.body.style.backgroundRepeat = 'no-repeat';
     document.body.style.backgroundSize = 'cover';
 
+    // Scroll reveal
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains('reveal-left')) {
+              entry.target.classList.add('visible');
+            } else if (entry.target.classList.contains('reveal')) {
+              entry.target.classList.add('visible');
+            }
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
+    sectionRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
     return () => {
       document.body.style.backgroundImage = '';
+      sectionRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
     };
   }, []);
 
@@ -25,25 +48,25 @@ const Home = () => {
     <div className="min-h-[180vh] bg-white flex flex-col">
       <Header />
       <main className="flex-1 flex flex-col">
-        <section id="hero">
+        <section id="hero" ref={(el) => (sectionRefs.current[0] = el)} className="reveal">
           <HeroSection />
         </section>
-        <section id="skills">
+        <section id="skills" ref={(el) => (sectionRefs.current[1] = el)} className="reveal">
           <SkillsSection />
         </section>
-        <section id="portfolio">
+        <section id="portfolio" ref={(el) => (sectionRefs.current[2] = el)} className="reveal">
           <PortfolioSection />
         </section>
-        <section id="certifications">
+        <section id="certifications" ref={(el) => (sectionRefs.current[3] = el)} className="reveal">
           <CertificationsSection />
         </section>
-        <section id="achievements">
+        <section id="achievements" ref={(el) => (sectionRefs.current[4] = el)} className="reveal">
           <AchievementsSection />
         </section>
-        <section id="positions">
+        <section id="positions" ref={(el) => (sectionRefs.current[5] = el)} className="reveal">
           <PositionsSection />
         </section>
-        <section id="contact">
+        <section id="contact" ref={(el) => (sectionRefs.current[6] = el)} className="reveal">
           <ContactSection />
         </section>
       </main>

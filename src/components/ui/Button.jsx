@@ -7,9 +7,11 @@ const Button = ({
   variant = 'primary',
   size = 'medium',
   className = '',
+  morph = false,
   ...props
 }) => {
-  const baseClasses = 'font-medium transition-colors duration-200 focus:outline-none';
+  const baseClasses =
+    'font-medium transition-colors duration-200 focus:outline-none button-animated';
 
   const variants = {
     primary: 'bg-black text-white hover:bg-gray-800',
@@ -28,7 +30,7 @@ const Button = ({
     large: 'px-6 py-3 text-lg',
   };
 
-  const buttonClasses = `${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`;
+  const buttonClasses = `${baseClasses} ${variants[variant]} ${sizes[size]} ${morph ? 'morph-shape' : ''} ${className}`;
 
   return (
     <button onClick={onClick} className={buttonClasses} {...props}>
@@ -52,6 +54,7 @@ Button.propTypes = {
   ]),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   className: PropTypes.string,
+  morph: PropTypes.bool,
 };
 
 export default Button;

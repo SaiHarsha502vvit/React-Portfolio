@@ -1,0 +1,116 @@
+/* --- Page Transitions --- */
+.page-transition-fade-enter {
+  opacity: 0;
+  transform: scale(0.98);
+}
+.page-transition-fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s cubic-bezier(.22,1,.36,1), transform 0.5s cubic-bezier(.22,1,.36,1);
+}
+.page-transition-fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.page-transition-fade-exit-active {
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.4s cubic-bezier(.22,1,.36,1), transform 0.4s cubic-bezier(.22,1,.36,1);
+}
+
+/* --- Scroll Reveal --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* --- Slide-in from left Reveal (for Portfolio) --- */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px) scale(0.98);
+  transition: opacity 0.8s cubic-bezier(.22,1,.36,1), transform 0.8s cubic-bezier(.22,1,.36,1);
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* --- Parallax --- */
+.parallax {
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(.22,1,.36,1);
+}
+
+/* --- Microinteractions --- */
+.button-animated {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.button-animated::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: var(--button-hover-bg, #bae1ff);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s, opacity 0.4s;
+  opacity: 0.2;
+  z-index: 0;
+}
+.button-animated:hover::after {
+  width: 220%;
+  height: 220%;
+  opacity: 0.3;
+}
+.button-animated:active {
+  transform: scale(0.97);
+}
+
+/* --- Morphing (clip-path) --- */
+.morph-shape {
+  transition: clip-path 0.6s cubic-bezier(.22,1,.36,1);
+  clip-path: circle(30% at 50% 50%);
+}
+.morph-shape.open {
+  clip-path: circle(120% at 50% 50%);
+}
+
+/* --- Text Animations --- */
+.text-reveal {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(1em) skewY(8deg);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.text-reveal.visible {
+  opacity: 1;
+  transform: translateY(0) skewY(0deg);
+}
+
+/* --- Hover Reveal --- */
+.hover-reveal {
+  position: relative;
+  overflow: hidden;
+}
+.hover-reveal .hover-image {
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  opacity: 0;
+  transform: scale(1.08) translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+  z-index: 1;
+  pointer-events: none;
+}
+.hover-reveal:hover .hover-image {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
