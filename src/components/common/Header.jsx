@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Home', to: '#hero' },
+  { name: 'About', to: '#about' },
   { name: 'Skills', to: '#skills' },
   { name: 'Projects', to: '#portfolio' },
   { name: 'Certifications', to: '#certifications' },
@@ -59,7 +60,7 @@ const Header = () => {
           <img src="/images/img_vector.svg" alt="Logo" className="w-12 h-12" />
           <span className="ml-2 text-3xl font-handlee text-[#0c0c0c]">Ala Sai Harsha</span>
         </div>
-        <nav className="hidden md:flex items-center space-x-6 bg-mint/60 rounded-full px-6 py-2 shadow-md">
+        <nav className="hidden md:flex items-center space-x-2 bg-mint/60 rounded-full px-6 py-2 shadow-md">
           {navLinks.map((link) => (
             <a
               key={link.name}
