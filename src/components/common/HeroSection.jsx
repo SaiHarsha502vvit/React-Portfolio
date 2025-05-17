@@ -13,7 +13,7 @@ const HeroSection = () => {
                 <img
                   src="/images/img_arrow.svg"
                   alt="Arrow"
-                  className="absolute left-96 -top-2 w-16 h-20 hidden lg:block"
+                  className="absolute left-3/4 -top-2 w-16 h-20 hidden lg:block"
                 />
                 <div className="bg-[#ffc100] px-4 py-1 shadow-md mx-auto md:mx-0 text-center rounded-2xl">
                   <span className="font-handlee text-4xl">Ala Sai Harsha</span>
