@@ -74,7 +74,8 @@ const PortfolioSection = () => {
               description={item.description}
               githubLink={item.githubLink}
               liveDemoLink={item.liveDemoLink}
-              className="h-full"
+              className={`h-full animate-staggered-fade-in pastel-glow-hover`}
+              style={{ animationDelay: `${idx * 0.12 + 0.1}s` }}
             />
           ))}
         </div>

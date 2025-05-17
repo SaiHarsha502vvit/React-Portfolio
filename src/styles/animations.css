@@ -157,3 +157,37 @@
   animation: raindrop-bounce 1.2s infinite alternate;
   background: var(--skills-cursor-color, rgba(186, 201, 255, 0.8));
 }
+
+@keyframes zoomSlideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(40px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.animate-zoom-slide-in {
+  animation: zoomSlideIn 1.1s cubic-bezier(.22,1,.36,1);
+}
+
+@keyframes staggeredFadeIn {
+  0% { opacity: 0; transform: translateY(30px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animate-staggered-fade-in {
+  animation: staggeredFadeIn 0.8s cubic-bezier(.22,1,.36,1) both;
+}
+
+.pastel-glow-hover {
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+.pastel-glow-hover:hover {
+  box-shadow: 0 0 0 6px rgba(186,201,255,0.18), 0 8px 32px 0 rgba(157,220,255,0.18), 0 2px 8px 0 var(--accent-mint);
+  transform: scale(1.05);
+}

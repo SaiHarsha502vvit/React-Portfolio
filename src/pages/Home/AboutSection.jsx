@@ -9,6 +9,7 @@ const AboutSection = () => (
           style={{
             boxShadow:
               '0 0 0 8px rgba(68,226,248,0.18), 0 8px 32px 0 rgba(68,226,248,0.32), 0 2px 8px 0 var(--accent-lavender)',
+            animationDelay: '0.1s',
           }}
         >
           {/* Faded pastel ring effect */}
@@ -29,7 +30,10 @@ const AboutSection = () => (
       </div>
       <div className="flex-1 about-details-container slide-in">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-          <div className="details-container bg-white/80 rounded-2xl shadow p-6 flex flex-col items-center text-center border border-mint animate-float">
+          <div
+            className="neumorphism details-container bg-white/80 rounded-2xl shadow p-6 flex flex-col items-center text-center border border-mint animate-float animate-staggered-fade-in pastel-glow-hover"
+            style={{ animationDelay: '0.2s' }}
+          >
             <img
               src="/images/img_group_1.svg"
               alt="Experience icon"
@@ -42,7 +46,10 @@ const AboutSection = () => (
               Full Stack, AI/ML, Cloud
             </p>
           </div>
-          <div className="details-container bg-white/80 rounded-2xl shadow p-6 flex flex-col items-center text-center border border-mint animate-float">
+          <div
+            className="neumorphism details-container bg-white/80 rounded-2xl shadow p-6 flex flex-col items-center text-center border border-mint animate-float animate-staggered-fade-in pastel-glow-hover"
+            style={{ animationDelay: '0.3s' }}
+          >
             <img
               src="/images/img_group_2.svg"
               alt="Education icon"
@@ -56,7 +63,10 @@ const AboutSection = () => (
             </p>
           </div>
         </div>
-        <div className="text-container bg-white/70 rounded-2xl shadow p-6 border border-peach animate-fade-in animate-float">
+        <div
+          className="glassmorphism text-container bg-white/70 rounded-2xl shadow p-6 border border-peach animate-fade-in animate-float animate-staggered-fade-in pastel-glow-hover"
+          style={{ animationDelay: '0.4s' }}
+        >
           <p className="text-lg text-[#181818] font-medium animate-float">
             I am a Graduate Software Engineer with hands-on experience in full stack development,
             AI/ML, and cloud technologies. Skilled in Python, Node.js, React, FastAPI, and
