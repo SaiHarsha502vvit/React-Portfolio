@@ -191,3 +191,16 @@
   box-shadow: 0 0 0 6px rgba(186,201,255,0.18), 0 8px 32px 0 rgba(157,220,255,0.18), 0 2px 8px 0 var(--accent-mint);
   transform: scale(1.05);
 }
+
+@keyframes diceRoll {
+  0% { transform: rotateX(0deg) rotateY(0deg) scale(1); }
+  20% { transform: rotateX(8deg) rotateY(-6deg) scale(1.03); }
+  40% { transform: rotateX(-6deg) rotateY(8deg) scale(1.04); }
+  60% { transform: rotateX(6deg) rotateY(-8deg) scale(1.03); }
+  80% { transform: rotateX(-8deg) rotateY(6deg) scale(1.02); }
+  100% { transform: rotateX(0deg) rotateY(0deg) scale(1); }
+}
+.dice-animate {
+  animation: diceRoll 5.5s cubic-bezier(.22,1,.36,1) infinite;
+  will-change: transform;
+}
