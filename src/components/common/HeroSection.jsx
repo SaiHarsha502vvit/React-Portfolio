@@ -30,9 +30,9 @@ const HeroSection = () => {
           </div>
           <div className="flex flex-col justify-center ">
             <div className="relative w-full max-w-xl mx-auto flex flex-col items-center">
-              {/* 3D Dice effect */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-                <div className="dice-3d-outer">
+              {/* 3D Dice effect - smaller, bounces behind the text, not fixed */}
+              <div className="absolute top-1/2 left-0 w-[64px] h-[64px] -translate-y-1/2 pointer-events-none z-0 dice-3d-horizontal-bounce-animate">
+                <div className="dice-3d-outer w-full h-full">
                   <div className="dice-3d-inner dice-3d-animate">
                     <div className="dice-3d-face dice-3d-face-front" />
                     <div className="dice-3d-face dice-3d-face-back" />

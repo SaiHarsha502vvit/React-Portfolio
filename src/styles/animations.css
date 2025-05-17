@@ -206,13 +206,12 @@
 }
 
 .dice-3d-outer {
-  width: 220px;
-  height: 220px;
-  perspective: 900px;
+  width: 100%;
+  height: 100%;
+  perspective: 600px;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
   z-index: 1;
 }
 .dice-3d-inner {
@@ -234,17 +233,99 @@
 }
 .dice-3d-face {
   position: absolute;
-  width: 220px;
-  height: 220px;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(135deg, #e6e6fa 60%, #b8fff9 100%);
-  border-radius: 2.5rem;
-  box-shadow: 0 8px 32px 0 rgba(157,220,255,0.18), 0 2px 8px 0 var(--accent-mint);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 16px 0 rgba(157,220,255,0.18), 0 1px 4px 0 var(--accent-mint);
   opacity: 0.92;
-  border: 3px solid #ffc100;
+  border: 2px solid #ffc100;
 }
-.dice-3d-face-front { transform: rotateY(0deg) translateZ(110px); }
-.dice-3d-face-back { transform: rotateY(180deg) translateZ(110px); }
-.dice-3d-face-right { transform: rotateY(90deg) translateZ(110px); }
-.dice-3d-face-left { transform: rotateY(-90deg) translateZ(110px); }
-.dice-3d-face-top { transform: rotateX(90deg) translateZ(110px); }
-.dice-3d-face-bottom { transform: rotateX(-90deg) translateZ(110px); }
+.dice-3d-face-front { transform: rotateY(0deg) translateZ(32px); }
+.dice-3d-face-back { transform: rotateY(180deg) translateZ(32px); }
+.dice-3d-face-right { transform: rotateY(90deg) translateZ(32px); }
+.dice-3d-face-left { transform: rotateY(-90deg) translateZ(32px); }
+.dice-3d-face-top { transform: rotateX(90deg) translateZ(32px); }
+.dice-3d-face-bottom { transform: rotateX(-90deg) translateZ(32px); }
+
+@keyframes dice3dHorizontalRoll {
+  0% {
+    left: 0;
+    transform: translateY(-50%) translateX(0) rotateX(0deg) rotateY(0deg);
+  }
+  20% {
+    left: 20%;
+    transform: translateY(-50%) translateX(20vw) rotateX(30deg) rotateY(-20deg);
+  }
+  40% {
+    left: 40%;
+    transform: translateY(-50%) translateX(40vw) rotateX(-20deg) rotateY(30deg);
+  }
+  60% {
+    left: 60%;
+    transform: translateY(-50%) translateX(60vw) rotateX(25deg) rotateY(-30deg);
+  }
+  80% {
+    left: 80%;
+    transform: translateY(-50%) translateX(80vw) rotateX(-30deg) rotateY(20deg);
+  }
+  100% {
+    left: 100%;
+    transform: translateY(-50%) translateX(100vw) rotateX(0deg) rotateY(0deg);
+  }
+}
+.dice-3d-horizontal-animate {
+  animation: dice3dHorizontalRoll 7.5s linear infinite;
+  will-change: left, transform;
+}
+
+@keyframes dice3dHorizontalBounce {
+  0% {
+    left: 0;
+    transform: translateY(-50%) translateX(0) rotateX(0deg) rotateY(0deg) scale(1);
+  }
+  10% {
+    left: 10%;
+    transform: translateY(-60%) translateX(10%) rotateX(18deg) rotateY(-10deg) scale(1.08);
+  }
+  20% {
+    left: 20%;
+    transform: translateY(-50%) translateX(20%) rotateX(24deg) rotateY(-18deg) scale(1);
+  }
+  30% {
+    left: 30%;
+    transform: translateY(-60%) translateX(30%) rotateX(-18deg) rotateY(18deg) scale(1.08);
+  }
+  40% {
+    left: 40%;
+    transform: translateY(-50%) translateX(40%) rotateX(-24deg) rotateY(24deg) scale(1);
+  }
+  50% {
+    left: 50%;
+    transform: translateY(-60%) translateX(50%) rotateX(18deg) rotateY(-24deg) scale(1.08);
+  }
+  60% {
+    left: 60%;
+    transform: translateY(-50%) translateX(60%) rotateX(24deg) rotateY(-18deg) scale(1);
+  }
+  70% {
+    left: 70%;
+    transform: translateY(-60%) translateX(70%) rotateX(-18deg) rotateY(18deg) scale(1.08);
+  }
+  80% {
+    left: 80%;
+    transform: translateY(-50%) translateX(80%) rotateX(-24deg) rotateY(24deg) scale(1);
+  }
+  90% {
+    left: 90%;
+    transform: translateY(-60%) translateX(90%) rotateX(0deg) rotateY(0deg) scale(1.08);
+  }
+  100% {
+    left: 100%;
+    transform: translateY(-50%) translateX(100%) rotateX(0deg) rotateY(0deg) scale(1);
+  }
+}
+.dice-3d-horizontal-bounce-animate {
+  animation: dice3dHorizontalBounce 7.5s linear infinite;
+  will-change: left, transform;
+}
