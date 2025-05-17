@@ -28,10 +28,14 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="flex flex-col justify-center">
-            <p className="text-2xl mb-6 leading-relaxed">
-              I'll design your website and will develop to
+            <p className="text-2xl text-wrap font-bold mb-6 leading-relaxed">
+              I craft with design, enchant with code,
               <br />
-              land it on internet using No-code.
+              and summon your website
+              <br />
+              to live and glow
+              <br />
+              across the magical web.
             </p>
             <div>
               <Button variant="primary" className="px-6 py-4 text-2xl font-semibold">
