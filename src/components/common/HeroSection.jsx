@@ -3,9 +3,9 @@ import Button from '../ui/Button';
 
 const HeroSection = () => {
   return (
-    <section className="pt-32 pb-16 relative">
+    <section className="min-h-[100vh] pt-32 pb-16 flex items-center relative">
       <div className="container mx-auto px-4">
-        <div className="text-center grid grid-cols-1 md:grid-cols-2 md:gap-8 lg:gap-48 animate-float ">
+        <div className="text-center grid grid-cols-1 md:grid-cols-2 md:gap-8 lg:gap-32 animate-float ">
           {' '}
           <div className="relative">
             <div className="flex items-center mb-6">
@@ -21,7 +21,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="relative">
-              <h1 className="text-5xl font-semibold leading-tight mb-4 animate-zoom-slide-in">
+              <h1 className="lg:text-6xl md:text-5xl font-semibold leading-tight mb-4 animate-zoom-slide-in">
                 I Create Top Notch
                 <br />
                 Web Applications
@@ -29,7 +29,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="flex flex-col justify-center ">
-            <p className="text-2xl text-wrap font-bold mb-6 leading-relaxed animate-fade-in">
+            <p className="text-3xl text-wrap font-bold mb-6 leading-relaxed animate-fade-in">
               I craft with design, enchant with code,
               <br />
               and summon your website

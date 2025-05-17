@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AboutSection = () => (
-  <div className="container mx-auto px-4 py-16 animate-float">
+  <div className="min-h-[75vh] container mx-auto px-4 py-16 animate-float">
     <div className="mb-10 flex flex-col md:flex-row items-center gap-10">
       <div className="flex-1 flex justify-center">
         <div
