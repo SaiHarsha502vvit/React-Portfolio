@@ -8,6 +8,7 @@ import SkillsSection from './SkillsSection';
 import CertificationsSection from './CertificationsSection';
 import AchievementsSection from './AchievementsSection';
 import PositionsSection from './PositionsSection';
+import AboutSection from './AboutSection';
 
 const Home = () => {
   const sectionRefs = useRef([]);
@@ -51,22 +52,25 @@ const Home = () => {
         <section id="hero" ref={(el) => (sectionRefs.current[0] = el)} className="reveal">
           <HeroSection />
         </section>
-        <section id="skills" ref={(el) => (sectionRefs.current[1] = el)} className="reveal">
+        <section id="about" ref={(el) => (sectionRefs.current[1] = el)} className="reveal">
+          <AboutSection />
+        </section>
+        <section id="skills" ref={(el) => (sectionRefs.current[2] = el)} className="reveal">
           <SkillsSection />
         </section>
-        <section id="portfolio" ref={(el) => (sectionRefs.current[2] = el)} className="reveal">
+        <section id="portfolio" ref={(el) => (sectionRefs.current[3] = el)} className="reveal">
           <PortfolioSection />
         </section>
-        <section id="certifications" ref={(el) => (sectionRefs.current[3] = el)} className="reveal">
+        <section id="certifications" ref={(el) => (sectionRefs.current[4] = el)} className="reveal">
           <CertificationsSection />
         </section>
-        <section id="achievements" ref={(el) => (sectionRefs.current[4] = el)} className="reveal">
+        <section id="achievements" ref={(el) => (sectionRefs.current[5] = el)} className="reveal">
           <AchievementsSection />
         </section>
-        <section id="positions" ref={(el) => (sectionRefs.current[5] = el)} className="reveal">
+        <section id="positions" ref={(el) => (sectionRefs.current[6] = el)} className="reveal">
           <PositionsSection />
         </section>
-        <section id="contact" ref={(el) => (sectionRefs.current[6] = el)} className="reveal">
+        <section id="contact" ref={(el) => (sectionRefs.current[7] = el)} className="reveal">
           <ContactSection />
         </section>
       </main>
