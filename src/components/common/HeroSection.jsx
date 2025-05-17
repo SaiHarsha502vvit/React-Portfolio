@@ -29,41 +29,57 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="flex flex-col justify-center ">
-            <div className="relative w-full max-w-xl mx-auto bg-white/80 rounded-[2.5rem] shadow-2xl border-4 border-[#ffc100] dice-animate p-8 flex flex-col items-center pastel-glow-hover">
-              <div className="absolute top-4 left-4 w-4 h-4 bg-[#ffc100] rounded-full shadow-md"></div>
-              <div className="absolute top-4 right-4 w-4 h-4 bg-[#44e2f8] rounded-full shadow-md"></div>
-              <div className="absolute bottom-4 left-4 w-4 h-4 bg-[#b8fff9] rounded-full shadow-md"></div>
-              <div className="absolute bottom-4 right-4 w-4 h-4 bg-[#e6e6fa] rounded-full shadow-md"></div>
-              <p className="text-2xl text-wrap font-bold mb-6 leading-relaxed animate-fade-in z-10">
-                I craft with design, enchant with code,
-                <br />
-                and summon your website
-                <br />
-                to live and glow
-                <br />
-                across the magical web.
-              </p>
-              <div className="animate-fade-in z-10">
-                <a
-                  href="https://www.linkedin.com/in/sai-harsha-ala-370773239/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button
-                    variant="primary"
-                    className="px-6 py-4 text-2xl font-semibold pastel-glow-hover"
+            <div className="relative w-full max-w-xl mx-auto flex flex-col items-center">
+              {/* 3D Dice effect */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+                <div className="dice-3d-outer">
+                  <div className="dice-3d-inner dice-3d-animate">
+                    <div className="dice-3d-face dice-3d-face-front" />
+                    <div className="dice-3d-face dice-3d-face-back" />
+                    <div className="dice-3d-face dice-3d-face-top" />
+                    <div className="dice-3d-face dice-3d-face-bottom" />
+                    <div className="dice-3d-face dice-3d-face-left" />
+                    <div className="dice-3d-face dice-3d-face-right" />
+                  </div>
+                </div>
+              </div>
+              {/* Content above the dice */}
+              <div className="relative z-10 w-full bg-white/80 rounded-[2.5rem] shadow-2xl border-4 border-[#ffc100] p-8 flex flex-col items-center pastel-glow-hover">
+                <div className="absolute top-4 left-4 w-4 h-4 bg-[#ffc100] rounded-full shadow-md"></div>
+                <div className="absolute top-4 right-4 w-4 h-4 bg-[#44e2f8] rounded-full shadow-md"></div>
+                <div className="absolute bottom-4 left-4 w-4 h-4 bg-[#b8fff9] rounded-full shadow-md"></div>
+                <div className="absolute bottom-4 right-4 w-4 h-4 bg-[#e6e6fa] rounded-full shadow-md"></div>
+                <p className="text-2xl text-wrap font-bold mb-6 leading-relaxed animate-fade-in z-10">
+                  I craft with design, enchant with code,
+                  <br />
+                  and summon your website
+                  <br />
+                  to live and glow
+                  <br />
+                  across the magical web.
+                </p>
+                <div className="animate-fade-in z-10">
+                  <a
+                    href="https://www.linkedin.com/in/sai-harsha-ala-370773239/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Hire me
-                  </Button>
-                </a>
-                <a href="/Ala_Sai_Harsha.pdf" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    variant="secondary"
-                    className="ml-4 px-6 py-4 text-2xl font-semibold pastel-glow-hover"
-                  >
-                    Download CV
-                  </Button>
-                </a>
+                    <Button
+                      variant="primary"
+                      className="px-6 py-4 text-2xl font-semibold pastel-glow-hover"
+                    >
+                      Hire me
+                    </Button>
+                  </a>
+                  <a href="/Ala_Sai_Harsha.pdf" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="secondary"
+                      className="ml-4 px-6 py-4 text-2xl font-semibold pastel-glow-hover"
+                    >
+                      Download CV
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -39,8 +39,8 @@ const AboutSection = () => (
               alt="Experience icon"
               className="w-10 h-10 mb-2 animate-float"
             />
-            <h3 className="font-handlee text-xl mb-1 text-[#0c0c0c] animate-float">Experience</h3>
-            <p className="text-base text-secondary animate-float">
+            <h3 className="font-handlee text-xl mb-1 text-[#181818] animate-float">Experience</h3>
+            <p className=" animate-float text-[#181818] font-extralight">
               Internships & Projects
               <br />
               Full Stack, AI/ML, Cloud
@@ -55,8 +55,8 @@ const AboutSection = () => (
               alt="Education icon"
               className="w-10 h-10 mb-2 animate-float"
             />
-            <h3 className="font-handlee text-xl mb-1 text-[#0c0c0c] animate-float">Education</h3>
-            <p className="text-base text-secondary animate-float">
+            <h3 className="font-handlee text-xl mb-1 text-[#181818] animate-float">Education</h3>
+            <p className="animate-float text-[#181818] font-extralight">
               B.Tech, Computer Science
               <br />
               Vasireddy Venkatadri Institute of Technology
@@ -67,13 +67,12 @@ const AboutSection = () => (
           className="glassmorphism text-container bg-white/70 rounded-2xl shadow p-6 border border-peach animate-fade-in animate-float animate-staggered-fade-in pastel-glow-hover"
           style={{ animationDelay: '0.4s' }}
         >
-          <p className="text-lg text-[#181818] font-medium animate-float">
+          <p className="text-lg text-[#181818] font-handlee animate-float">
             I am a Graduate Software Engineer with hands-on experience in full stack development,
-            AI/ML, and cloud technologies. Skilled in Python, Node.js, React, FastAPI, and
+            AI/ML, and cloud technologies. Skilled in Java, Python, Node.js, React, FastAPI, and
             PostgreSQL. I am a quick learner, creative problem solver, and passionate about building
             impactful solutions. I have completed my B.Tech in Computer Science from Vasireddy
-            Venkatadri Institute of Technology and have worked on several internships and projects
-            in the field.
+            Venkatadri Institute of Technology and have worked on several projects in the field.
           </p>
         </div>
       </div>
