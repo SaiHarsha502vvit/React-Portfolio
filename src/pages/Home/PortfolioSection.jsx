@@ -54,7 +54,7 @@ const PortfolioSection = () => {
     <section>
       <div className="container mx-auto px-4">
         <div className="mb-12 relative flex items-center">
-          <Tag variant="lavender" className="mb-4 animate-fade-in">
+          <Tag variant="lavender" className="mb-4 animate-fade-in gradient-text">
             Featured Projects
           </Tag>
           <img
@@ -63,7 +63,7 @@ const PortfolioSection = () => {
             className="absolute left-32 top-12 w-20 h-20 animate-bounce-slow"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 stagger-parent">
           {portfolioItems.map((item, idx) => (
             <Card
               key={item.id}
@@ -74,7 +74,7 @@ const PortfolioSection = () => {
               description={item.description}
               githubLink={item.githubLink}
               liveDemoLink={item.liveDemoLink}
-              className={`h-full animate-staggered-fade-in pastel-glow-hover`}
+              className={`h-full animate-staggered-fade-in pastel-glow-hover stagger-child`}
               style={{ animationDelay: `${idx * 0.12 + 0.1}s` }}
             />
           ))}

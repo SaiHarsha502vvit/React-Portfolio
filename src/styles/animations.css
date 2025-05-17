@@ -329,3 +329,32 @@
   animation: dice3dHorizontalBounce 7.5s linear infinite;
   will-change: left, transform;
 }
+
+/* --- Section Scroll Transitions (Design System) --- */
+@keyframes sectionFadeSlideIn {
+  0% { opacity: 0; transform: translateY(60px) scale(0.98); }
+  60% { opacity: 1; transform: translateY(-8px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.section-fade-slide-in {
+  animation: sectionFadeSlideIn 1.1s cubic-bezier(.22,1,.36,1);
+  will-change: opacity, transform;
+}
+
+@keyframes sectionFadeSlideUp {
+  0% { opacity: 0; transform: translateY(80px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.section-fade-slide-up {
+  animation: sectionFadeSlideUp 0.9s cubic-bezier(.22,1,.36,1);
+  will-change: opacity, transform;
+}
+
+@keyframes sectionFadeScaleIn {
+  0% { opacity: 0; transform: scale(0.96); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.section-fade-scale-in {
+  animation: sectionFadeScaleIn 0.8s cubic-bezier(.22,1,.36,1);
+  will-change: opacity, transform;
+}

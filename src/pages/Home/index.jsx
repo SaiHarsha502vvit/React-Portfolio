@@ -49,28 +49,60 @@ const Home = () => {
     <div className="min-h-[180vh] bg-white flex flex-col">
       <Header />
       <main className="flex-1 flex flex-col">
-        <section id="hero" ref={(el) => (sectionRefs.current[0] = el)} className="reveal">
+        <section
+          id="hero"
+          ref={(el) => (sectionRefs.current[0] = el)}
+          className="reveal section-fade-slide-in"
+        >
           <HeroSection />
         </section>
-        <section id="about" ref={(el) => (sectionRefs.current[1] = el)} className="reveal">
+        <section
+          id="about"
+          ref={(el) => (sectionRefs.current[1] = el)}
+          className="reveal section-fade-scale-in"
+        >
           <AboutSection />
         </section>
-        <section id="skills" ref={(el) => (sectionRefs.current[2] = el)} className="reveal">
+        <section
+          id="skills"
+          ref={(el) => (sectionRefs.current[2] = el)}
+          className="reveal section-fade-slide-up"
+        >
           <SkillsSection />
         </section>
-        <section id="portfolio" ref={(el) => (sectionRefs.current[3] = el)} className="reveal">
+        <section
+          id="portfolio"
+          ref={(el) => (sectionRefs.current[3] = el)}
+          className="reveal section-fade-slide-in"
+        >
           <PortfolioSection />
         </section>
-        <section id="certifications" ref={(el) => (sectionRefs.current[4] = el)} className="reveal">
+        <section
+          id="certifications"
+          ref={(el) => (sectionRefs.current[4] = el)}
+          className="reveal section-fade-scale-in"
+        >
           <CertificationsSection />
         </section>
-        <section id="achievements" ref={(el) => (sectionRefs.current[5] = el)} className="reveal">
+        <section
+          id="achievements"
+          ref={(el) => (sectionRefs.current[5] = el)}
+          className="reveal section-fade-slide-up"
+        >
           <AchievementsSection />
         </section>
-        <section id="positions" ref={(el) => (sectionRefs.current[6] = el)} className="reveal">
+        <section
+          id="positions"
+          ref={(el) => (sectionRefs.current[6] = el)}
+          className="reveal section-fade-slide-in"
+        >
           <PositionsSection />
         </section>
-        <section id="contact" ref={(el) => (sectionRefs.current[7] = el)} className="reveal">
+        <section
+          id="contact"
+          ref={(el) => (sectionRefs.current[7] = el)}
+          className="reveal section-fade-scale-in"
+        >
           <ContactSection />
         </section>
       </main>

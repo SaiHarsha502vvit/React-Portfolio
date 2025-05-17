@@ -21,7 +21,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="relative">
-              <h1 className="lg:text-6xl md:text-5xl font-semibold leading-tight mb-4 animate-zoom-slide-in">
+              <h1 className="lg:text-6xl text-5xl font-semibold leading-tight mb-4 animate-zoom-slide-in">
                 I Create Top Notch
                 <br />
                 Web Applications

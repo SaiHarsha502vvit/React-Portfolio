@@ -15,8 +15,8 @@ const Card = ({
 }) => {
   return (
     <div
-      className={`hover-reveal border-3 border-black rounded-2xl bg-gradient-to-br from-lavender via-mint to-peach shadow-xl overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl group ${className}`}
-      style={{ minHeight: 400 }}
+      className={`border-3 border-black rounded-2xl bg-white overflow-hidden shadow-xl transition-transform duration-300 group pastel-glow-pulse card-3d-hover stagger-child ${className}`}
+      style={{ minHeight: 400, minWidth: 0 }}
       {...props}
     >
       <div className="relative p-5">
