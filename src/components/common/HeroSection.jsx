@@ -72,7 +72,7 @@ const HeroSection = () => {
                     </Button>
                   </a>
                   <a
-                    href="/AlaSaiHarsha_SoftwareEngineer_2025.pdf"
+                    href="/AlaSaiHarsha_Software_Engineer_2025.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
