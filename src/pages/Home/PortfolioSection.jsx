@@ -48,6 +48,15 @@ const PortfolioSection = () => {
         'Designed and developed a responsive front-end campus portal, improving accessibility',
       githubLink: 'https://github.com/SaiHarsha502vvit/College-Web',
     },
+    {
+      id: 4,
+      image: '/images/Habit-Tracker-Image.png',
+      title: 'Habit-Tracker ',
+      tagText: 'UI Design and Backed development',
+      tagVariant: 'peach',
+      description: 'Developed a Full Stack Github Style Habit-Tracker and Pomodoro Application',
+      githubLink: 'https://github.com/SaiHarsha502vvit/Habit-Tracker',
+    },
   ];
 
   return (

@@ -7,7 +7,7 @@ import Tag from '../../components/ui/Tag';
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: 'Ala Sai Harsha',
-    email: 'alasaiharsha@gmail.com',
+    email: 'Example -alasaiharsha@gmail.com',
     message: 'I want to discuss you about .......',
   });
 
@@ -39,8 +39,8 @@ const ContactSection = () => {
             className="absolute left-32 top-6 w-20 h-20 animate-bounce-slow"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col justify-center items-start">
+        <div className="grid grid-cols-1 md:grid-cols-10 gap-8">
+          <div className="flex flex-col justify-center items-start md:col-span-3">
             <p className="text-2xl mb-8">
               Have a project idea?
               <br />
@@ -65,10 +65,10 @@ const ContactSection = () => {
               </Button>
             </a>
           </div>
-          <div>
+          <div className="md:col-span-7">
             <form
               onSubmit={handleSubmit}
-              className="bg-white bg-opacity-80 rounded-2xl shadow-lg p-8 animate-fade-in"
+              className="bg-white bg-opacity-80 rounded-2xl shadow-lg p-8 animate-fade-in flex flex-col h-full"
             >
               <div className="mb-6 flex items-center">
                 <div className="mr-4 border border-black bg-mint px-4 py-1 shadow-md rounded-lg">
@@ -109,6 +109,16 @@ const ContactSection = () => {
                   labelClassName="hidden"
                   inputClassName="border-none text-2xl font-handlee bg-peach rounded-lg"
                 />
+              </div>
+              <div className="flex justify-end mt-8">
+                <Button
+                  type="submit"
+                  variant="mint"
+                  size="large"
+                  className="text-xl font-semibold px-8"
+                >
+                  Send
+                </Button>
               </div>
             </form>
           </div>

@@ -16,14 +16,14 @@ const Card = ({
   return (
     <div
       className={`border-3 border-black rounded-2xl bg-white overflow-hidden shadow-xl transition-transform duration-300 group pastel-glow-pulse card-3d-hover stagger-child ${className}`}
-      style={{ minHeight: 400, minWidth: 0 }}
+      style={{ minHeight: 700, minWidth: 0 }}
       {...props}
     >
-      <div className="relative p-5">
+      <div className="relative p-2">
         <img
           src={image}
           alt={title}
-          className="w-full h-48 object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
+          className="w-full h-48 object-contain rounded-xl transition-transform duration-300 group-hover:scale-110"
         />
       </div>
       <div className="p-5 flex flex-col items-start gap-2 relative">

@@ -8,7 +8,6 @@ const navLinks = [
   { name: 'Projects', to: '#portfolio' },
   { name: 'Certifications', to: '#certifications' },
   { name: 'Achievements', to: '#achievements' },
-  { name: 'Positions', to: '#positions' },
   { name: 'Contact', to: '#contact' },
 ];
 
@@ -49,7 +48,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 shadow-lg backdrop-blur-md py-2' : 'bg-transparent py-4'}`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-2 flex justify-between items-center gap-10">
         <div
           className="flex items-center cursor-pointer"
           onClick={(e) => {
@@ -58,9 +57,11 @@ const Header = () => {
           }}
         >
           <img src="/images/img_vector.svg" alt="Logo" className="w-12 h-12" />
-          <span className="ml-2 text-3xl font-handlee text-[#0c0c0c]">Ala Sai Harsha</span>
+          <span className="ml-2 text-3xl font-handlee text-[#0c0c0c] text-nowrap">
+            Ala Sai Harsha
+          </span>
         </div>
-        <nav className="hidden md:flex items-center space-x-2 bg-mint/60 rounded-full px-6 py-2 shadow-md">
+        <nav className="hidden md:flex items-center space-x-1 bg-mint/60 rounded-full px-4 py-2 shadow-md">
           {navLinks.map((link) => (
             <a
               key={link.name}

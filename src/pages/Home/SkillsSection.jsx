@@ -5,7 +5,7 @@ import Tag from '../../components/ui/Tag';
 const skills = [
   { category: 'Programming Languages', items: ['Java', 'JavaScript', 'Python'] },
   { category: 'Frontend', items: ['HTML', 'CSS', 'React Js', 'Tailwind CSS'] },
-  { category: 'Backend', items: ['NodeJs', 'ExpressJs'] },
+  { category: 'Backend', items: ['Spring-Boot','NodeJs', 'ExpressJs'] },
   { category: 'Databases', items: ['MongoDB', 'MySql'] },
   { category: 'Web Services', items: ['REST', 'GraphQL'] },
   { category: 'Other Tools', items: ['Postman', 'GIT', 'Figma', 'VSCode'] },

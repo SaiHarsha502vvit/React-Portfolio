@@ -71,7 +71,11 @@ const HeroSection = () => {
                       Hire me
                     </Button>
                   </a>
-                  <a href="/Ala_Sai_Harsha.pdf" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="/AlaSaiHarsha_SoftwareEngineer_2025.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button
                       variant="secondary"
                       className="ml-4 px-6 py-4 text-2xl font-semibold pastel-glow-hover"
